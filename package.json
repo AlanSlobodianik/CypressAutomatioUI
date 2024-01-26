@@ -1,0 +1,19 @@
+{
+  "name": "cypressautomationui",
+  "version": "1.0.0",
+  "description": "Cypress Automation UI",
+  "main": "index.js",
+  "scripts": {
+    "open": "cypress open --e2e --browser chrome"
+  },
+  "author": "Alan",
+  "license": "ISC",
+  "devDependencies": {
+    "chai-colors": "^1.0.1",
+    "cypress": "^13.6.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "cypress-iframe": "^1.0.1"
+  }
+}
