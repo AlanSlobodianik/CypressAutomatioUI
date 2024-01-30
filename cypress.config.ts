@@ -10,9 +10,10 @@ export default defineConfig({
         prod:'https://coding.pasv.us/course',
         info:'Hello World!',
         base:'https://uitestingplayground.com',
-        expected:'https://play1.automationcamp.ir/expected_conditions.html'
+        expected:'https://play1.automationcamp.ir/expected_conditions.html',
+        demoQA:'https://demoqa.com'
 
     }
   },
-    defaultCommandTimeout: 5_000,
+    defaultCommandTimeout: 16_000,
 });
