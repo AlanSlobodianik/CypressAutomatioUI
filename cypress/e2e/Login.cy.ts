@@ -8,7 +8,8 @@ describe('Login Page',()=>{
         cy.get('#userName').type('test')
         cy.get('#password').type('Test1234*')
         cy.get('#login').click()
-        cy.get('#submit').click()
+        // cy.get('#submit').click()
+        cy.contains('Log out').click()
     })
     it('login with PageObject', ()=>{
         LoginPage.submitButtonLogin()
