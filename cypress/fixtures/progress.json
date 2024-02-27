@@ -1,0 +1,16 @@
+{
+  "message": "Get courses progress",
+  "success": true,
+  "fail": false,
+  "payload": [
+    {
+      "_id": "655982e62286f89d1055b5f7",
+      "completedLessons": 115,
+      "totalLessons": 115,
+      "course": {
+        "_id": "5ff2005cacc2d5003ae26bc7",
+        "name": "QA Manual"
+      }
+    }
+  ]
+}

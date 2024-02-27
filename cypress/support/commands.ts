@@ -25,16 +25,33 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 //
-declare global {
-    namespace Cypress {
-        interface Chainable<Subject = any> {
-            login(userName: string, password: string): Chainable<void>;
-        }
-    }
-}
+// declare global {
+//     namespace Cypress {
+//         interface Chainable<Subject = any> {
+//             login(userName: string, password: string): Chainable<void>;
+//             readingXlsx(file: any):any;
+//         }
+//     }
+// }
 
 Cypress.Commands.add('login', (userName: string, password: string) => {
     cy.get('#userName').type(userName);
     cy.get('#password').type(password);
     cy.get('#login').click();
+});
+Cypress.Commands.add('readingXlsx', (file) => {
+    return cy.task('parseXlsx', {filePath: file});
+});
+Cypress.Commands.add('apiLogin', (userName:string, password:string) => {
+    cy.request({
+        method:'POST',
+        url:'https://server-stage.pasv.us/user/login',
+        body:{
+            email: userName,
+            password: password
+        }
+    }).then(response=>{
+        console.log(response)
+    })
+
 });
